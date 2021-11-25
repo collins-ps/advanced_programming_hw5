@@ -22,20 +22,24 @@ I referenced class materials and geekforgeeks (https://www.geeksforgeeks.org/dij
 I did not observe any compilation or run-time errors. The Valgrind report is clean.
 
 ### Results
+
 **Graph 1**:
-Start Vertex:    End Vertex:     Distance:
-     644            6278          192
-     644            6290          186
-     5720           6278          186
-     645            6278          184
-     3634           6278          184
-     644            6187          183
-     4568           6278          183
-     644            6188          181
-     4193           6278          181
-     5995           6278          181
+
+Start Vertex:    End Vertex:     Distance:<br>
+     644            6278          192<br>
+     644            6290          186<br>
+     5720           6278          186<br>
+     645            6278          184<br>
+     3634           6278          184<br>
+     644            6187          183<br>
+     4568           6278          183<br>
+     644            6188          181<br>
+     4193           6278          181<br>
+     5995           6278          181<br>
+   
    
 **Graph 2**:
+
 Start Vertex:    End Vertex:     Distance:
     100201          36397          103
     100201          150246         103
@@ -50,14 +54,18 @@ Start Vertex:    End Vertex:     Distance:
 
 ### Performance
 Program was compiled using -o3 and run on the Linux server from out of state.
+
 **Graph 1**:
+
           nThreads         totalTime (s)          Speedup
              64              0.501007               16.6 
              16              1.022393               8.12 
              8               1.841065               4.5 
              1               8.302425                NA 
               
+              
 **Graph 2**:
+
           nThreads         totalTime (s)          Speedup
              64              0.501007               16.6 
              16              1.022393               8.12 
