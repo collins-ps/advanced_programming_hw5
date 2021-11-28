@@ -25,32 +25,32 @@ I did not observe any compilation or run-time errors. The Valgrind report is cle
 
 **Graph 1**:
 
-Start Vertex:    End Vertex:     Distance:<br>
-     644            6278          192<br>
-     644            6290          186<br>
-     5720           6278          186<br>
-     645            6278          184<br>
-     3634           6278          184<br>
-     644            6187          183<br>
-     4568           6278          183<br>
-     644            6188          181<br>
-     4193           6278          181<br>
-     5995           6278          181<br>
+Start Vertex,    End Vertex,     Distance<br>
+     644,            6278,          192<br>
+     644,            6290,          186<br>
+     5720,           6278,          186<br>
+     645,            6278,          184<br>
+     3634,           6278,          184<br>
+     644,            6187,          183<br>
+     4568,           6278,          183<br>
+     644,            6188,          181<br>
+     4193,           6278,          181<br>
+     5995,           6278,          181<br>
    
    
 **Graph 2**:
 
-Start Vertex:    End Vertex:     Distance:
-    100201          36397          103
-    100201          150246         103
-    41354           36397          102
-    41354           150246         102
-    100201          92762          102
-    100201          139117         102
-    26333           36397          101
-    26333           150246         101
-    40743           36397          101
-    40743           150246         101
+Start Vertex,    End Vertex,     Distance<br>
+    100201,          36397,          103<br>
+    100201,          150246,         103<br>
+    41354,           36397,          102<br>
+    41354,           150246,         102<br>
+    100201,          92762,          102<br>
+    100201,          139117,         102<br>
+    26333,           36397,          101<br>
+    26333,           150246,         101<br>
+    40743,           36397,          101<br>
+    40743,           150246,         101<br>
 
 ### Performance
 Program was compiled using -g -O3 and run on the Linux server from out of state.
