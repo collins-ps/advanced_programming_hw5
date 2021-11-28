@@ -5,6 +5,7 @@
 #include "graph.h"
 #include "timer.h"
 #include <omp.h>
+#include <assert.h>
 
 #define M 10 // number of longest paths distances to output in datafile
 
@@ -37,6 +38,7 @@ bool isInMinHeap(MinHeap *minHeap, int v);
 void destoyMinHeap(MinHeap *minHeap);
 void dijkstra(Graph *g, int start, distPos *distance);
 int distComparer(const void *a, const void *b);
+void testProgram(); // three test cases to test dijkstra function
 
 int main(int argc, char **argv) {
     Graph g;
@@ -58,6 +60,10 @@ int main(int argc, char **argv) {
         StartTimer(); 
         dijkstra(&g, i, dist);
         totalTime += GetTimer() / 1000.0;
+        for (i=0; i < g.nvertices; i++){
+            if (dist[i].dist == INT_MAX)
+                dist[i].dist = -1;
+        }
         qsort(dist, g.nvertices, sizeof(distPos), distComparer);
         for (int j = 0; j < g.nvertices && j < M; j++){
             topDistances[position].dist = dist[j].dist;
@@ -208,10 +214,6 @@ void dijkstra(Graph *g, int start, distPos *distance) {
     }
     free(processed);
     destoyMinHeap(minHeap);
-    for (i=0; i < g->nvertices; i++){
-        if (distance[i].dist == INT_MAX)
-            distance[i].dist = -1;
-    }
     return;
 }
 
@@ -225,4 +227,45 @@ int distComparer(const void *a, const void *b){
     return 0;
   else 
     return -1;
+}
+
+void testProgram(){
+    Graph g;
+    read_graph("testgraph.txt",&g,true); 
+    distPos dist[g.nvertices];
+
+    /* test 1 */
+    dijkstra(&g, 6, dist);
+    assert(dist[0].dist == 7);
+    assert(dist[1].dist == 12);
+    assert(dist[2].dist == 16);
+    assert(dist[3].dist == 2);
+    assert(dist[4].dist == 19);
+    assert(dist[5].dist == 17);
+    assert(dist[6].dist == 0);
+    assert(dist[7].dist == 3);
+
+    /* test 2 */
+    dijkstra(&g, 0, dist);
+    assert(dist[0].dist == 0);
+    assert(dist[1].dist == 8);
+    assert(dist[2].dist == 12);
+    assert(dist[3].dist == 15);
+    assert(dist[4].dist == 12);
+    assert(dist[5].dist == 10);
+    assert(dist[6].dist == 19);
+    assert(dist[7].dist == 22);
+
+    /* test 3 */
+    dijkstra(&g, 7, dist);
+    assert(dist[0].dist == 4);
+    assert(dist[1].dist == 9);
+    assert(dist[2].dist == 13);
+    assert(dist[3].dist == 16);
+    assert(dist[4].dist == 16);
+    assert(dist[5].dist == 14);
+    assert(dist[6].dist == 23);
+    assert(dist[7].dist == 0);
+
+    printf("Passed all tests.\n");
 }
