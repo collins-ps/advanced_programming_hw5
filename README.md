@@ -67,10 +67,9 @@ Program was compiled using -g -O3 and run on the Linux server from out of state.
 **Graph 2**:
 
           nThreads         totalTime (s)          Speedup
-             64              0.501007               16.6 
-             16              1.022393               8.12 
-             8               1.841065               4.5 
-             1               8.302425                NA 
+             64               1002                                 
+             16               2409  
+             1                                  NA 
              
 ## Compiling and running
 `make dj` and then `./dj filename num_threads` (e.g.`./dj graph1.txt 16`). If there is no input for num_threads, program will run serially with 1 thread. Finally, run `make clean`.
