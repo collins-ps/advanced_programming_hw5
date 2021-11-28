@@ -53,15 +53,15 @@ Start Vertex:    End Vertex:     Distance:
     40743           150246         101
 
 ### Performance
-Program was compiled using -o3 and run on the Linux server from out of state.
+Program was compiled using -g -O3 and run on the Linux server from out of state.
 
 **Graph 1**:
 
           nThreads         totalTime (s)          Speedup
-             64              0.501007               16.6 
-             16              1.022393               8.12 
-             8               1.841065               4.5 
-             1               8.302425                NA 
+             64              0.434174               9.9 
+             16              0.649108               6.6 
+             8               0.997707               4.3 
+             1               4.293279                NA 
               
               
 **Graph 2**:
