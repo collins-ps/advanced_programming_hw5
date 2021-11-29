@@ -19,7 +19,7 @@ In addition to devising and running your own correctness tests, carry out a perf
 I referenced class materials and geekforgeeks (https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/).
 
 ## Discussion on program and performance
-I did not observe any compilation or run-time errors. The Valgrind report is clean.
+I did not observe any compilation or run-time errors. The Valgrind report is clean. I removed the comments in graph1.txt.
 
 ### Results
 
