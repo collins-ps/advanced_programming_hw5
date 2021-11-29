@@ -38,7 +38,7 @@ bool isInMinHeap(MinHeap *minHeap, int v);
 void destoyMinHeap(MinHeap *minHeap);
 void dijkstra(Graph *g, int start, distPos *distance);
 int distComparer(const void *a, const void *b);
-void testProgram(); // three test cases to test dijkstra function
+void testProgram(); // three test cases to test dijkstra function. Prints "Passed all tests" if results are accurate for all three tests.
 
 int main(int argc, char **argv) {
     Graph g;
