@@ -268,4 +268,5 @@ void testProgram(){
     assert(dist[7].dist == 0);
 
     printf("Passed all tests.\n");
+    destroyGraph(&g);
 }
